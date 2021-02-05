@@ -1,0 +1,54 @@
+nav a {
+    font-size: 2rem;
+    color: var(--color4) !important;
+}
+
+nav a:hover {
+    font-size: 2rem;
+    color: var(--color2) !important;
+}
+
+nav a.activated {
+    font-size: 2rem;
+    color: var(--color2) !important;
+}
+
+nav {
+    background-color: var(--colorbg) !important;
+    height: 15vh;
+    color: var(--color3) !important;
+}
+
+.collapse.navbar-collapse {
+    background-color: var(--colorbg) !important;
+    margin-left: -15px !important;
+    width: 110% !important;
+}
+
+nav li {
+    margin-left: 5vh;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color2) !important;
+}
+
+.activated {
+    color: var(--color2) !important;
+}
+
+.voice-cont {
+    width: 60% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-toggler:hover {
+    color: var(--color2);
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+    border: none !important;
+    color: var(--color2);
+}
