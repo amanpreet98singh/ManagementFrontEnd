@@ -1,1 +1,212 @@
-<p>invoices works!</p>
+<!--Boostrap Header-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#"><img src="../../../assets/logo3.png" alt="" style="width:17rem"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: white !important;">
+        <i class="fa fa-bars" style="font-size: 3rem; outline: none;"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class=" navbar-nav mr-auto ">
+            <li class="nav-item active ">
+                <a class="nav-link  " routerLink="/home">Home <span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link  " routerLink="/articles">  Articoli</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link  " routerLink="/customer">  Clienti</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link activated " routerLink="/invoices">  Fatture</a>
+            </li>
+        </ul>
+
+        <ul style="float: right !important;">
+            <li class="nav-item" style="float: right !important; list-style: none !important;">
+                <a class="nav-link active" routerLink='/logout'> <i class="fas fa-sign-out-alt" style="margin-right: 10px;"></i> Esci </a>
+            </li>
+
+            <li class="nav-item" style="float: right !important; list-style: none !important;">
+                <a class="nav-link active" href="#"> <i class="fas fa-user" style="margin-right: 10px;"></i> User</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<!-- end header-->
+<!-- corpo  base-->
+<div style="margin-top: 10vh; background-color: var(--color2) !important; ">
+    <div class="row " style="width: 101%; background-color: var(--color2) !important; ">
+
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 cont-page " style="background-color: var(--color2); padding-top: 10vh; height: auto; ">
+            <!-- end copro base-->
+
+            <div class="container table-responsive py-5" style="margin-top: 0%">
+                <div style=" color: var(--colorbg); ">
+                    <h1 style="display: inline-block; font-size: 3rem !important;font-weight: bold !important;">Invoices.</h1> <i class="fas fa-cash-register" style="margin-left: 10px;font-size: 3rem !important;"></i>
+                </div>
+
+
+                <table class="table table-bordered table-hover" style="margin-top: 2%;">
+                    <thead class="thead-dark">
+                        <tr style="background-color: var(--colorbg) !important; border: 1px solid white !important; ">
+                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Azioni</th>
+                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Numero</th>
+                            <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col"> Data </th>
+                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Cliente</th>
+                            <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col">Pagamento</th>
+                            <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col">Totale</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: white !important;">
+                        <tr>
+                            <th scope="row"><i class="fas fa-edit" id="edit"></i></th>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="div-edit" style="width: 100%;">
+                <div style="background-color: var(--color4); height: auto; width: 50%; position: fixed; top: 20vh; left: 25%; z-index: 9999999999999999; ">
+                    <i class="fas fa-times" style="float: right; margin-right: 10px; margin-top: 10px; font-size: 3rem; color: var(--color2);"></i>
+                    <form style="margin-top: 5vh; margin-bottom: 10vh;">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Example select</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Example multiple select</label>
+                            <select multiple class="form-control" id="exampleFormControlSelect2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Ricominica copro base-->
+        </div>
+
+    </div>
+</div>
+<!-- end copro base-->
+
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start ">
+    <!-- Grid container -->
+    <div class="container p-4 ">
+        <!--Grid row-->
+        <div class="row ">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ">
+                <img src="../../../assets/logo3.png " alt=" " style="margin-left: -20vh; width: 38rem !important; margin-top: 1vh; ">
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
+                <h5 class="text-uppercase " style="color: var(--color2);">About "The Management"</h5>
+
+                <p>
+                    The Management è un gestionale semplice ed essenziale pensato per gestire le funzionalità base di un negozio. É ideale per i piccoli e medi privat che hanno l'esigenza di gestire gli ordini e le fattura di una cerchia ristretta di clienti. The Management
+                    offre inoltre la possibilità di gestire il prorpio magazzino articoli.
+                </p>
+            </div>
+            <!--Grid column-->
+
+
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ">
+                <h5 class="text-uppercase mb-0 " style="color: var(--color2);">Link del sito</h5>
+
+                <ul class="list-unstyled ">
+                    <li>
+                        <a href="#! " class="text-dark ">Home</a>
+                    </li>
+                    <li>
+                        <a href="#! " class="text-dark ">Articoli</a>
+                    </li>
+                    <li>
+                        <a href="#! " class="text-dark ">Clienti</a>
+                    </li>
+                    <li>
+                        <a href="#! " class="text-dark ">Fatture</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2); font-size: 1.5rem; color: var(--color2) !important;">
+        © 2021 Copyright
+        <a class="text-dark " href=" " style="color: unset !important; ">Fondazione Jobs Academy</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!--End Footer -->
