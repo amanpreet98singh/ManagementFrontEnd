@@ -1,1 +1,134 @@
-<p>customers works!</p>
+<!-- corpo  base-->
+<div style="margin-top: 10vh; background-color: var(--color2) !important; ">
+    <div class="row " style="width: 101%; background-color: var(--color2) !important; ">
+
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 cont-page " style="background-color: var(--color2); padding-top: 10vh; height: auto; ">
+            <!-- end copro base-->
+
+            <div class="container table-responsive py-5" style="margin-top: 0%">
+                <div style=" color: var(--colorbg); ">
+                    <h1 style="display: inline-block; font-size: 3rem !important;font-weight: bold !important;">Clienti.</h1> <i class="fas fa-users" style="margin-left: 10px;font-size: 3rem !important;"></i>
+                </div>
+
+                <table class="table table-bordered table-hover" style="margin-top: 2%;">
+                    <thead class="thead-dark">
+                        <tr style="background-color: var(--colorbg) !important; border: 1px solid white !important; ">
+                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Numero</th>
+                            <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col"> Data </th>
+                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Cliente</th>
+                            <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col">Pagamento</th>
+                            <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col">Totale</th>
+                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: white !important;">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@twitter</td>
+                            <th scope="row">
+                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
+                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>@twitter</td>
+                            <th scope="row">
+                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
+                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                            <th scope="row">
+                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
+                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
+                            </th>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <th scope="row">
+                                    <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
+                                    <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <th scope="row">
+                                    <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
+                                    <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <th scope="row">
+                                    <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
+                                    <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
+                                </th>
+
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button onclick="toggleLayerOverlay()"><div id="overlay" style="display: none; position: fixed; width: 215vh; height: 110vh; background: #0A0903; opacity: 0.8; z-index: 2;">
+
+            </div>
+        </button>
+
+            <div id="div-edit" style="width: 100%; display: none; color: var(--color4);">
+                <div style="background-color: var(--color2); height: auto; width: 50%; position: fixed; top: 20vh; left: 25%; z-index: 9999999999999999; ">
+                    <button id="x-icon" onclick="toggleLayerX()" style="float: right;"><i class="fas fa-times" style="float: right; margin-right: 10px; margin-top: 10px; font-size: 3rem;"></i></button>
+                    <h1 style="width: 80%; margin-left: auto; margin-right: auto; text-transform: uppercase; font-weight: bold; font-size: 2rem;">Modifica Cliente</h1>
+                    <form style="margin-top: 5vh; margin-bottom: 10vh; width: 80%; margin-left: auto; margin-right: auto;">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Codice</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Codice" readonly disabled>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Data</label>
+                            <input class="form-control" id="exampleFormControlSelect1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Example multiple select</label>
+                            <input multiple class="form-control" id="exampleFormControlSelect2">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <input class="form-control" id="exampleFormControlTextarea1" rows="3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Ricominica copro base-->
+        </div>
+
+    </div>
+</div>
+<!-- end copro base-->
