@@ -15,22 +15,22 @@
                 <table class="table table-bordered table-hover" style="margin-top: 2%;">
                     <thead class="thead-dark">
                         <tr style="background-color: var(--colorbg) !important; border: 1px solid white !important; ">
-                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Azioni</th>
                             <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Numero</th>
                             <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col"> Data </th>
                             <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Cliente</th>
                             <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col">Pagamento</th>
                             <th style="background-color: var(--colorbg) !important; border: 1px solid white !important; " scope="col">Totale</th>
+                            <th style="background-color: var(--colorbg) !important;  border: 1px solid white !important; " scope="col ">Azioni</th>
                         </tr>
                     </thead>
                     <tbody style="color: white !important;">
                         <tr>
-                            <th scope="row"><button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button></th>
                             <th scope="row">1</th>
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
                             <td>@twitter</td>
+                            <th scope="row"><button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button></th>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
@@ -38,6 +38,7 @@
                             <td>Thornton</td>
                             <td>@fat</td>
                             <td>@twitter</td>
+                            <th scope="row"><button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button></th>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
@@ -45,6 +46,7 @@
                             <td>the Bird</td>
                             <td>@twitter</td>
                             <td>@twitter</td>
+                            <th scope="row"><button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button></th>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
@@ -52,6 +54,7 @@
                             <td>the Bird</td>
                             <td>@twitter</td>
                             <td>@twitter</td>
+                            <th scope="row"><button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button></th>
                         </tr>
                         <tr>
                             <th scope="row">5</th>
@@ -59,6 +62,7 @@
                             <td>the Bird</td>
                             <td>@twitter</td>
                             <td>@twitter</td>
+                            <th scope="row"><button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button></th>
                         </tr>
                         <tr>
                             <th scope="row">6</th>
@@ -66,6 +70,7 @@
                             <td>the Bird</td>
                             <td>@twitter</td>
                             <td>@twitter</td>
+                            <th scope="row"><button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button></th>
                         </tr>
                     </tbody>
                 </table>
@@ -79,20 +84,16 @@
             <div id="div-edit" style="width: 100%;" style="display: none;">
                 <div style="background-color: var(--color4); height: auto; width: 50%; position: fixed; top: 20vh; left: 25%; z-index: 9999999999999999; ">
                     <button onclick="toggleLayerX()" style="float: right;"><i class="fas fa-times" style="float: right; margin-right: 10px; margin-top: 10px; font-size: 3rem; color: var(--color2);"></i></button>
-                    <form style="margin-top: 5vh; margin-bottom: 10vh;">
+                    <h1 style="width: 80%; margin-left: auto; margin-right: auto; text-transform: uppercase; font-weight: bold; font-size: 2rem;">Modifica Fattura</h1>
+                    <form style="margin-top: 5vh; margin-bottom: 10vh; width: 80%; margin-left: auto; margin-right: auto;">
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            <label for="exampleFormControlInput1">Codice</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Codice" readonly disabled>
+                            <label for="exampleFormControlSelect1">Data</label>
+                            <input class="form-control" id="exampleFormControlSelect1">
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
+
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Example multiple select</label>
