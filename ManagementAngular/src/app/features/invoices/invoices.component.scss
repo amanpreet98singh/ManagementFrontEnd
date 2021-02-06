@@ -45,3 +45,22 @@ input:focus {
     outline: none !important;
     border: none !important;
 }
+
+th:last-child {
+    width: 10%;
+}
+
+
+/*media*/
+
+@media screen and (max-width: 800px) {
+    .cont-page {
+        height: 140vh !important;
+    }
+    .row {
+        width: 102.6% !important;
+    }
+}
+
+
+/*end media*/
