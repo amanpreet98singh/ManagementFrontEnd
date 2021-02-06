@@ -70,9 +70,15 @@
                     </tbody>
                 </table>
             </div>
+
+            <button onclick="toggleLayerOverlay()"><div id="overlay" style="display: none; position: fixed; width: 215vh; height: 110vh; background: #0A0903; opacity: 0.8; z-index: 2;">
+
+            </div>
+        </button>
+
             <div id="div-edit" style="width: 100%;" style="display: none;">
                 <div style="background-color: var(--color4); height: auto; width: 50%; position: fixed; top: 20vh; left: 25%; z-index: 9999999999999999; ">
-                    <i class="fas fa-times" style="float: right; margin-right: 10px; margin-top: 10px; font-size: 3rem; color: var(--color2);"></i>
+                    <button onclick="toggleLayerX()" style="float: right;"><i class="fas fa-times" style="float: right; margin-right: 10px; margin-top: 10px; font-size: 3rem; color: var(--color2);"></i></button>
                     <form style="margin-top: 5vh; margin-bottom: 10vh;">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email address</label>
