@@ -1,5 +1,15 @@
-body {
+.theme-1 {
     --colorbg: #2d6a4f; //header, footer
+    --colorbgdark: #0a3823; //header, footer
+    --colorbglight: #5fb38d;
+    --color1: #1b4332;
+    --color2: #081c15; //color page, color icon
+    --color3: #40916c; //hover
+    --color4: white; //text footer, text header
+}
+
+.theme-2 {
+    --colorbg: red; //header, footer
     --colorbgdark: #0a3823; //header, footer
     --colorbglight: #5fb38d;
     --color1: #1b4332;

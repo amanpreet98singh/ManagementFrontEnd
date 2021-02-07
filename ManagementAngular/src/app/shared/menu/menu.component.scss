@@ -9,7 +9,7 @@
 
 .menu ol {
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0px;
     padding: 0;
 }
 
@@ -75,9 +75,9 @@
     background-image: url(../../../assets/logo3.png);
     background-repeat: no-repeat;
     background-size: 100% 59px;
-    margin-top: 1px;
+    margin-top: 3px;
+    margin-left: 2px;
     cursor: pointer;
-    margin-left: 10%;
 }
 
 @media screen and (max-width: 600px) {
@@ -182,4 +182,119 @@ form:hover input {
 form:hover .fa {
     background: #07051a;
     color: white;
+}
+
+
+/* THEME COLOR */
+
+.themecolors {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--colorbg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.themecolors h1 {
+    color: var(--color1);
+    font-family: var(--fontfamily);
+}
+
+.themecolors button {
+    color: var(--color1);
+    background: var(--colorbg);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0rem 0rem -12rem 1rem;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 3rem;
+    width: 3rem;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: var(--colorbg) url('../../../assets/switch.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 82% 82%;
+}
+
+input:checked+.slider {
+    background-color: #77777780;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--color5);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: var(--colorbg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.no-hover {
+    background-color: transparent !important;
 }

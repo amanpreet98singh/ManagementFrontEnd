@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="theme-asport">
+<html lang="en" class="theme-1">
 
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -409,4 +409,32 @@
         x.style.display = "none";
         y.style.display = "none";
     }
+</script>
+<!-- Toggle theme Color-->
+<script>
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-1') {
+            setTheme('theme-2');
+        } else {
+            setTheme('theme-1');
+        }
+    }
+
+    // Immediately invoked function to set the theme on initial load
+    (function() {
+        if (localStorage.getItem('theme') === 'theme-1') {
+            setTheme('theme-1');
+            document.getElementById('slider').checked = false;
+        } else {
+            setTheme('theme-2');
+            document.getElementById('slider').checked = true;
+        }
+    })();
 </script>
