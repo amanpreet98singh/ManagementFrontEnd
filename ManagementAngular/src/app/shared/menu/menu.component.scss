@@ -1,13 +1,10 @@
 .menu {
     position: fixed;
     width: 100%;
-<<<<<<< HEAD
+    top: 0;
+    left: 0;
     background-color: var(--colorbg) !important;
     height: 9rem;
-=======
-    background-color: var(--colorbg);
-    font-size: 18px;
->>>>>>> origin/menu-&-footer
 }
 
 .menu ol {
