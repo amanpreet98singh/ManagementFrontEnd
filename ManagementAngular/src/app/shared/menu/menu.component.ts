@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
+  search: boolean;
   constructor() { }
 
   ngOnInit(): void {
+    this.search=true;
+  }
+
+  logout(): void{
+    this.search=false;
+    console.log("logout da implementare");
   }
 
 }
