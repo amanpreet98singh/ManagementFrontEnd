@@ -12,12 +12,18 @@
             </ol>
         </li>
         <li class="menu-item logout" (click)="logout()"><a>Logout</a></li>
-        <li class="menu-item no-hover" *ngIf="search==true">
+        <li class="menu-item no-hover search" *ngIf="search==true">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
             <form>
                 <input type="search">
                 <i class="fa fa-search"></i>
             </form>
+        </li>
+        <li class="menu-item last no-hover">
+            <label class="toggle-control">
+                <input type="checkbox" checked="checked">
+                <span class="control"></span>
+              </label>
         </li>
     </ol>
 </nav>
