@@ -386,28 +386,50 @@
     function toggleLayer() {
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
+        var z = document.getElementById("div-new");
         if (x.style.display === "none") {
             x.style.display = "block";
             y.style.display = "block";
+            z.style.display = "block"
+
         } else {
             x.style.display = "none";
             y.style.display = "none";
+            z.style.display = "none"
         }
     }
     /* gestione layer edit on click sulla X*/
     function toggleLayerX() {
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
+        var z = document.getElementById("div-new");
         x.style.display = "none";
         y.style.display = "none";
+        z.style.display = "none";
     }
 
     /* gestione layer edit on click sull'oberlay*/
     function toggleLayerOverlay() {
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
+        var z = document.getElementById("div-new");
         x.style.display = "none";
         y.style.display = "none";
+        z.style.display = "none";
+    }
+
+    /* gestione new edit on click */
+    function toggleNewLayer() {
+        var y = document.getElementById("overlay");
+        var z = document.getElementById("div-new");
+        if (z.style.display === "none") {
+            y.style.display = "block";
+            z.style.display = "block"
+
+        } else {
+            y.style.display = "none";
+            z.style.display = "none"
+        }
     }
 </script>
 <!-- Toggle theme Color-->
