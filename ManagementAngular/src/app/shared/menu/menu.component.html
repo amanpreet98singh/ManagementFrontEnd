@@ -6,27 +6,18 @@
         <li class="menu-item">
             <a routerLink="/invoices">Fatture</a>
             <ol class="sub-menu">
-                <li class="menu-item"><a routerLink="/invoices-create">Crea</a></li>
-                <li class="menu-item"><a routerLink="/invoices">Le mie fatture</a></li>
-                <li class="menu-item"><a routerLink="/archived-invoices">Archiviate</a></li>
+                <li class="menu-item" routerLink="/invoices-create"><a>Crea</a></li>
+                <li class="menu-item" routerLink="/invoices"><a>Le mie fatture</a></li>
+                <li class="menu-item" routerLink="/archived-invoices"><a>Archiviate</a></li>
             </ol>
         </li>
-        <li class="menu-item logout"><a (click)="logout()">Logout</a></li>
+        <li class="menu-item logout" (click)="logout()"><a>Logout</a></li>
         <li class="menu-item no-hover" *ngIf="search==true">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
             <form>
                 <input type="search">
                 <i class="fa fa-search"></i>
             </form>
-        </li>
-        <li class="menu-item no-hover">
-            <div class="themecolors">
-                <label id="switch" class="switch">
-                    <input type="checkbox" onchange="toggleTheme()" id="slider">
-                    <span class="slider round"></span>
-                </label>
-                <!-- <button id="switch" onclick="toggleTheme()">Switch</button> -->
-            </div>
         </li>
     </ol>
 </nav>
