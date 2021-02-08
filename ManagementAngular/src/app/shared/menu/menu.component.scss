@@ -278,10 +278,10 @@ input:checked+.slider:before {
     -webkit-transform: translateX(24px);
     -ms-transform: translateX(24px);
     transform: translateX(24px);
-    background: var(--colorbg);
+    background: var(--colorbg) url('../../../assets/switch.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 82% 82%;
 }
 
 
