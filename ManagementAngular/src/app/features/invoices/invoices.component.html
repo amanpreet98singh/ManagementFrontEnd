@@ -11,6 +11,9 @@
                     <h1 style="display: inline-block; font-size: 3rem !important;font-weight: bold !important;">Fatture.</h1> <i class="fas fa-cash-register" style="margin-left: 10px;font-size: 3rem !important;"></i>
                 </div>
 
+                <div>
+                    <button onclick="toggleNewLayer()" style="background-color: var(--colorbg) !important; color: white !important; padding-left: 20px; padding-right: 20px; padding-top: 5px;  padding-bottom: 5px;transform: skewX(-10deg);"><a style="color: white !important;">Nuovo Cliente</a></button>
+                </div>
 
                 <table class="table table-bordered table-hover" style="margin-top: 2%;">
                     <thead class="thead-dark">
@@ -125,6 +128,35 @@
                     </form>
                 </div>
             </div>
+
+
+            <div id="div-new" style="width: 100%; display: none; color: var(--color4);">
+                <div style="background-color: var(--color2); height: auto; width: 50%; position: fixed; top: 20vh; left: 25%; z-index: 9999999999999999; ">
+                    <button id="x-icon" onclick="toggleLayerX()" style="float: right;"><i class="fas fa-times" style="float: right; margin-right: 10px; margin-top: 10px; font-size: 3rem;"></i></button>
+                    <h1 style="width: 80%; margin-left: auto; margin-right: auto; text-transform: uppercase; font-weight: bold; font-size: 2rem;">Crea Nuova Fattura</h1>
+                    <form style="margin-top: 5vh; margin-bottom: 10vh; width: 80%; margin-left: auto; margin-right: auto;">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Codice</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Codice" readonly disabled>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Data</label>
+                            <input class="form-control" id="exampleFormControlSelect1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Example multiple select</label>
+                            <input multiple class="form-control" id="exampleFormControlSelect2">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <input class="form-control" id="exampleFormControlTextarea1" rows="3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
 
 
             <!-- Ricominica copro base-->
