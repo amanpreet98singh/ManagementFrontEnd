@@ -418,6 +418,14 @@
         z.style.display = "none";
     }
 
+    /* gestione layer edit on click sull'overlay*/
+    function cancelConfirmLayer() {
+        var w = document.getElementById("div-delete");
+        var y = document.getElementById("overlay");
+        w.style.display = "none";
+        y.style.display = "none";
+    }
+
     /* gestione new edit on click */
     function toggleNewLayer() {
         var y = document.getElementById("overlay");
