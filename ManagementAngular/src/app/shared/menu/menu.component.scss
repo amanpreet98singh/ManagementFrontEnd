@@ -1,8 +1,11 @@
 .menu {
-    position: relative;
+    position: fixed;
     width: 100%;
     background-color: var(--colorbg);
     font-size: 18px;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
 }
 
 .menu ol {
