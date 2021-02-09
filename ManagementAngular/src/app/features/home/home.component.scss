@@ -9,8 +9,9 @@
 
 .block {
     background-color: var(--color2);
-    padding-top: 10vh;
-    height: 115vh;
+    padding-top: 19vh;
+    height: 73.2vh;
+    min-height: 51vh;
 }
 
 .block-function {
@@ -19,7 +20,7 @@
     text-align: center;
     vertical-align: middle;
     padding: 8vh 0vh 8vh 0vh;
-    width: 80%;
+    width: 90%;
     transform: skewX(-10deg);
     margin: 10%;
 }
