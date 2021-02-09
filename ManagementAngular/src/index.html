@@ -386,16 +386,12 @@
     function toggleLayer() {
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
-        var z = document.getElementById("div-new");
         if (x.style.display === "none") {
             x.style.display = "block";
             y.style.display = "block";
-            z.style.display = "block"
-
         } else {
             x.style.display = "none";
             y.style.display = "none";
-            z.style.display = "none"
         }
     }
     /* gestione layer edit on click sulla X*/
@@ -408,7 +404,7 @@
         z.style.display = "none";
     }
 
-    /* gestione layer edit on click sull'oberlay*/
+    /* gestione layer edit on click sull'overlay*/
     function toggleLayerOverlay() {
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
