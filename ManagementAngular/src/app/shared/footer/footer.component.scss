@@ -43,8 +43,9 @@ a:hover {
 .imgsocial {
     width: 30%;
     background-image: url(../../../assets/logo3.png);
-    background-size: 85% 55%;
+    background-size: 65% 50%;
     background-repeat: no-repeat;
+    background-position: 27% 3%;
 }
 
 //social icons
@@ -55,7 +56,7 @@ $social-button-active-color: #fff;
 $social-button-transition-time: 0.3s;
 .social-buttons {
     margin-top: 85px;
-    margin-left: -30px;
+    margin-left: -10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -64,7 +65,7 @@ $social-button-transition-time: 0.3s;
     }
 }
 
-$social-button-colors: ( "mail": #0072c6, "facebook": #3b5999, "linkedin": #0077b5, "github": #6e5494, "codepen": #212121, "steam": #7da10e, "snapchat":#eec900, "twitter": #55acee, "instagram": #e4405f, "npmjs": #c12127);
+$social-button-colors: ( "mail": #0072c6, "facebook": #3b5999, "linkedin": #0077b5, "github": #6e5494, "codepen": #1ab927, "steam": #7da10e, "snapchat":#eec900, "twitter": #55acee, "instagram": #e4405f, "npmjs": #c12127);
 .social-button {
     position: relative;
     display: flex;
