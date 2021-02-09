@@ -1,22 +1,23 @@
-footer {
-    z-index: 999999999;
-    position: relative !important;
-    background-color: var(--colorbg) !important;
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--colorbg);
 }
 
-footer p,
-footer li,
-footer a {
-    font-size: 1.5rem !important;
-    color: var(--color4) !important;
+.footer p,
+.footer li,
+.footer a {
+    font-size: 1.5rem;
+    color: var(--color4);
 }
 
-footer .text-uppercase {
+.text-uppercase {
     font-size: 2rem;
     font-weight: bold;
 }
 
-footer a:hover {
+a:hover {
     font-size: 2rem;
     color: var(--color2) !important;
 }
@@ -29,6 +30,14 @@ footer a:hover {
 
 .desc {
     width: 50%;
+}
+
+.bott {
+    text-align: center;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    color: var(--color2);
 }
 
 .imgsocial {
@@ -46,7 +55,7 @@ $social-button-active-color: #fff;
 $social-button-transition-time: 0.3s;
 .social-buttons {
     margin-top: 85px;
-    margin-left: -20px;
+    margin-left: -30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
