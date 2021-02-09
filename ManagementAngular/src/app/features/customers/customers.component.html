@@ -1,25 +1,141 @@
+<!-- corpo  base-->
 <app-menu [search]=true></app-menu>
-<div class="all">
-    <table class="table">
-        <tr class="tr">
-            <td class="th">Numero</td>
-            <td class="th">Data</td>
-            <td class="th">Cliente</td>
-            <td class="th">Pagamento</td>
-            <td class="th">Totale</td>
-            <td class="th">Azioni</td>
-        </tr>
-        <tr *ngFor="let item of arrayOne(28); let i = index;" class="tr">
-            <td class="td">{{i+1}}</td>
-            <td class="td">Mark</td>
-            <td class="td">Otto</td>
-            <td class="td">@mdo</td>
-            <td class="td">@twitter</td>
-            <td class="td">
-                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
-                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
-            </td>
-        </tr>
-    </table>
+
+
+<div class="container-page">
+    <div class="row container-row ">
+
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 table-container ">
+            <!-- end copro base-->
+
+            <div class="container table-responsive py-5 table-container-responsive">
+                <div class="title-container">
+                    <h1>Clienti.</h1> <i class="fas fa-users"></i>
+                </div>
+
+                <div class="button-container-new">
+                    <button onclick="toggleNewLayer()"><a>Nuovo Cliente</a></button>
+                </div>
+
+                <table class="table">
+                    <tr class="tr">
+                        <td class="th">Numero</td>
+                        <td class="th">Data</td>
+                        <td class="th">Cliente</td>
+                        <td class="th">Pagamento</td>
+                        <td class="th">Totale</td>
+                        <td class="th">Azioni</td>
+                    </tr>
+                    <tr *ngFor="let item of arrayOne(28); let i = index;" class="tr">
+                        <td class="td">{{i+1}}</td>
+                        <td class="td">Mark</td>
+                        <td class="td">Otto</td>
+                        <td class="td">@mdo</td>
+                        <td class="td">@twitter</td>
+                        <td class="td">
+                            <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
+                            <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
+                            <button onclick="toggleLayerConfirm()"><i class="fas fa-times"></i></button>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <button onclick="toggleLayerOverlay()"><div id="overlay">
+
+            </div>
+        </button>
+
+
+
+
+
+            <!-- Ricominica copro base-->
+        </div>
+
+    </div>
 </div>
+<!-- end copro base-->
 <app-footer></app-footer>
+
+<!--DIV MODIFICA CLIENTE-->
+<div id="div-edit" style="display: none;">
+    <div class="form-container">
+        <button id="x-icon" onclick="toggleLayerX()"><i class="fas fa-times"></i></button>
+        <h1>Modifica Cliente</h1>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Codice</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Codice" readonly disabled>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Data</label>
+                <input class="form-control" id="exampleFormControlSelect1">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Example multiple select</label>
+                <input multiple class="form-control" id="exampleFormControlSelect2">
+
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <input class="form-control" id="exampleFormControlTextarea1" rows="3">
+            </div>
+            <div class="form-group">
+                <button type="submit">Modifica Cliente</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--END DIV MODIFICA CLIENTE-->
+
+<!--DIV CREA CLIENTE-->
+
+<div id="div-new" style="display: none;">
+    <div class="form-container">
+        <button id="x-icon" onclick="toggleLayerX()"><i class="fas fa-times" ></i></button>
+        <h1>Crea Nuovo Cliente</h1>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Codice</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Codice" readonly disabled>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Data</label>
+                <input class="form-control" id="exampleFormControlSelect1">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Example multiple select</label>
+                <input multiple class="form-control" id="exampleFormControlSelect2">
+
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <input class="form-control" id="exampleFormControlTextarea1" rows="3">
+            </div>
+            <div class="form-group">
+                <button type="submit">Crea Cliente</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--END DIV CREA CLIENTE-->
+
+<!--DIV SEI SICURO DI VOLER ELIMINARE IL CLIENTE?-->
+
+<div id="div-delete" style="display: none; ">
+    <div class="form-container">
+        <button id="x-icon" onclick="toggleLayerX()"><i class="fas fa-times" ></i></button>
+        <h1>Sei sicuro di voler eliminare il Cliente?</h1>
+        <br> <br>
+        <button class="confirm-button" style="margin-right: 20px;" type="submit">Si</button>
+        <button onclick="cancelConfirmLayer()" class="confirm-button" id="annulla" type="submit">No</button>
+        <br><br><br>
+
+    </div>
+</div>

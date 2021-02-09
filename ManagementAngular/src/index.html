@@ -386,42 +386,63 @@
     function toggleLayer() {
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
-        var z = document.getElementById("div-new");
         if (x.style.display === "none") {
             x.style.display = "block";
             y.style.display = "block";
-            z.style.display = "block"
-
         } else {
             x.style.display = "none";
             y.style.display = "none";
-            z.style.display = "none"
         }
     }
     /* gestione layer edit on click sulla X*/
     function toggleLayerX() {
+        var w = document.getElementById("div-delete");
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
         var z = document.getElementById("div-new");
+        w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
     }
 
-    /* gestione layer edit on click sull'oberlay*/
+    /* gestione layer edit on click sull'overlay*/
     function toggleLayerOverlay() {
+        var w = document.getElementById("div-delete");
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
         var z = document.getElementById("div-new");
+        w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+    }
+
+    /* gestione layer edit on click sull'overlay*/
+    function cancelConfirmLayer() {
+        var w = document.getElementById("div-delete");
+        var y = document.getElementById("overlay");
+        w.style.display = "none";
+        y.style.display = "none";
     }
 
     /* gestione new edit on click */
     function toggleNewLayer() {
         var y = document.getElementById("overlay");
         var z = document.getElementById("div-new");
+        if (z.style.display === "none") {
+            y.style.display = "block";
+            z.style.display = "block"
+
+        } else {
+            y.style.display = "none";
+            z.style.display = "none"
+        }
+    }
+    /* gestione delete layer on click */
+    function toggleLayerConfirm() {
+        var y = document.getElementById("overlay");
+        var z = document.getElementById("div-delete");
         if (z.style.display === "none") {
             y.style.display = "block";
             z.style.display = "block"
