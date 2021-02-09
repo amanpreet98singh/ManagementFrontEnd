@@ -244,7 +244,10 @@ th:last-child {
     display: none;
     color: var(--color4);
     text-align: center;
-    padding-bottom: 200px;
+}
+
+#div-delete .form-container {
+    top: 35vh;
 }
 
 #div-delete .confirm-button {
