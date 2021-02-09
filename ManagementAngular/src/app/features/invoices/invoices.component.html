@@ -21,18 +21,18 @@
                 <table class="table">
                     <tr class="tr">
                         <td class="th">Numero</td>
+                        <td class="th">Cliente</td>
                         <td class="th">Data</td>
-                        <td class="th">Fattura</td>
                         <td class="th">Pagamento</td>
                         <td class="th">Totale</td>
                         <td class="th">Azioni</td>
                     </tr>
                     <tr *ngFor="let item of arrayOne(28); let i = index;" class="tr">
                         <td class="td">{{i+1}}</td>
-                        <td class="td">Mark</td>
-                        <td class="td">Otto</td>
-                        <td class="td">@mdo</td>
-                        <td class="td">@twitter</td>
+                        <td class="td">F.lli </td>
+                        <td class="td">24/02/2020</td>
+                        <td class="td">Bonifico</td>
+                        <td class="td">130</td>
                         <td class="td">
                             <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
                             <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
