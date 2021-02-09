@@ -1,5 +1,6 @@
 <!-- corpo  base-->
-<div style="margin-top: 10vh; background-color: var(--color2) !important; ">
+<app-menu></app-menu>
+<div style="background-color: var(--color2) !important; min-height:60%">
     <div class="row " style="width: 101%; background-color: var(--color2) !important; ">
 
 
@@ -27,66 +28,11 @@
                         </tr>
                     </thead>
                     <tbody style="color: white !important;">
-                        <tr>
+                        <tr *ngFor="let item of arrayOne(2); let i = index;">
                             <th scope="row">1</th>
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
-                            <td>@twitter</td>
-                            <th scope="row">
-                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
-                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@twitter</td>
-                            <th scope="row">
-                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
-                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <th scope="row">
-                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
-                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <th scope="row">
-                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
-                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <th scope="row">
-                                <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
-                                <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
                             <td>@twitter</td>
                             <th scope="row">
                                 <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
@@ -165,3 +111,4 @@
     </div>
 </div>
 <!-- end copro base-->
+<app-footer></app-footer>

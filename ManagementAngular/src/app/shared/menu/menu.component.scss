@@ -79,6 +79,10 @@
     max-width: 220px;
 }
 
+.no-hover:hover {
+    background-color: transparent;
+}
+
 @media screen and (max-width: 750px) {
     .logo {
         display: none;
@@ -194,67 +198,88 @@ form:hover .fa {
 
 //switcher
 .last {
-    max-width: 60px;
-    margin-left: 1%;
+    max-width: 70px;
 }
 
-.no-hover:hover {
-    background-color: transparent;
-}
-
-$toggle-background-color-on: red;
-$toggle-background-color-off: green;
-$toggle-control-color: white;
-$toggle-width: 50px;
-$toggle-height: 30px;
-$toggle-gutter: 5px;
-$toggle-radius: 50%;
-$toggle-control-speed: .17s;
-$toggle-control-ease: ease-in;
-// These are our computed variables
-// change at your own risk.
-$toggle-radius: $toggle-height / 2;
-$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
-.toggle-control {
-    display: block;
+.switch {
+    margin-top: -10px;
     position: relative;
-    padding-left: $toggle-width;
-    margin-bottom: 12px;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    //margin: 0rem 4rem -12rem 1rem;
+    top: 11px;
+    //right: -20px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
     cursor: pointer;
-    font-size: 22px;
-    user-select: none;
-    input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-    input:checked~.control {
-        background-color: $toggle-background-color-on;
-        &:after {
-            left: $toggle-width - $toggle-control-size - $toggle-gutter;
-        }
-    }
-    .control {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: $toggle-height;
-        width: $toggle-width;
-        border-radius: $toggle-radius;
-        background-color: $toggle-background-color-off;
-        transition: background-color $toggle-control-speed $toggle-control-ease;
-        &:after {
-            content: "";
-            position: absolute;
-            left: $toggle-gutter;
-            top: $toggle-gutter;
-            width: $toggle-control-size;
-            height: $toggle-control-size;
-            border-radius: $toggle-radius;
-            background: $toggle-control-color;
-            transition: left $toggle-control-speed $toggle-control-ease;
-        }
-    }
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color1);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 3rem;
+    width: 3rem;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: var(--colorbg) url('../../../assets/switch.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 82% 82%;
+}
+
+input:checked+.slider {
+    background-color: #77777780;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--color5);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(29px);
+    -ms-transform: translateX(29px);
+    transform: translateX(29px);
+    background: var(--colorbg) url('../../../assets/switch.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }

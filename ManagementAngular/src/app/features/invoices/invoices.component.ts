@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./invoices.component.scss']
 })
 export class InvoicesComponent implements OnInit {
-
   constructor() { }
-
+  
+  arrayOne(n: number): any[] {
+    return Array(n);
+  }
+  
   ngOnInit(): void {
   }
 
