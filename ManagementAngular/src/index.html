@@ -396,10 +396,12 @@
     }
     /* gestione layer edit on click sulla X*/
     function toggleLayerX() {
+        var v = document.getElementById("div-detail");
         var w = document.getElementById("div-delete");
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
         var z = document.getElementById("div-new");
+        v.style.display = "none";
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
@@ -408,17 +410,19 @@
 
     /* gestione layer edit on click sull'overlay*/
     function toggleLayerOverlay() {
+        var v = document.getElementById("div-detail");
         var w = document.getElementById("div-delete");
         var x = document.getElementById("div-edit");
         var y = document.getElementById("overlay");
         var z = document.getElementById("div-new");
+        v.style.display = "none";
         w.style.display = "none";
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
     }
 
-    /* gestione layer edit on click sull'overlay*/
+    /* gestione layer conferma al click su NO*/
     function cancelConfirmLayer() {
         var w = document.getElementById("div-delete");
         var y = document.getElementById("overlay");
@@ -439,6 +443,21 @@
             z.style.display = "none"
         }
     }
+
+    /* gestione detail layer on click */
+    function toggleLayerZoom() {
+        var y = document.getElementById("overlay");
+        var z = document.getElementById("div-detail");
+        if (z.style.display === "none") {
+            y.style.display = "block";
+            z.style.display = "block"
+
+        } else {
+            y.style.display = "none";
+            z.style.display = "none"
+        }
+    }
+
     /* gestione delete layer on click */
     function toggleLayerConfirm() {
         var y = document.getElementById("overlay");
