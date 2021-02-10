@@ -162,6 +162,12 @@ th:last-child {
     color: var(--color4);
 }
 
+#div-detail {
+    width: 100%;
+    display: none;
+    color: var(--color4);
+}
+
 .form-container {
     background-color: var(--bgcolorlayer);
     height: auto;
