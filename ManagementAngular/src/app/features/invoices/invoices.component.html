@@ -146,6 +146,7 @@
 <div id="div-detail" style="display: none; ">
     <div class="form-container">
         <button id="x-icon" onclick="toggleLayerX()"><i class="fas fa-times" ></i></button>
+        <button onclick="window.printDiv()" class="print"><i class="fas fa-print"></i></button>
         <div class="row">
 
             <div class="col-6 col-sm-6 col-md-6 col-lg-6 ">
@@ -170,20 +171,12 @@
                         <td class="th">Data</td>
                         <td class="th">Pagamento</td>
                         <td class="th">Totale</td>
-                        <td class="th">Azioni</td>
                     </tr>
                     <tr *ngFor="let item of arrayOne(28); let i = index;" class="tr">
                         <td class="td">{{i+1}}</td>
                         <td class="td">F.lli </td>
                         <td class="td">24/02/2020</td>
                         <td class="td">Bonifico</td>
-                        <td class="td">130</td>
-                        <td class="td">
-                            <button onclick="toggleLayer()"><i class="fas fa-edit" id="edit"></i></button>
-                            <button onclick="toggleLayerZoom()"><i class="fas fa-search" id="zoom"></i></button>
-                            <button onclick="toggleLayerConfirm()"><i class="fas fa-times"></i></button>
-
-                        </td>
                     </tr>
                 </table>
 
