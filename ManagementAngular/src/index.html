@@ -394,6 +394,18 @@
             y.style.display = "none";
         }
     }
+    /* gestione layer edit on click sulla matita*/
+    function toggleLayerZoom() {
+        var x = document.getElementById("div-detail");
+        var y = document.getElementById("overlay");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "block";
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+        }
+    }
     /* gestione layer edit on click sulla X*/
     function toggleLayerX() {
         var v = document.getElementById("div-detail");
@@ -422,7 +434,7 @@
         z.style.display = "none";
     }
 
-    /* gestione layer conferma al click su NO*/
+    /* gestione layer edit on click sull'overlay*/
     function cancelConfirmLayer() {
         var w = document.getElementById("div-delete");
         var y = document.getElementById("overlay");
@@ -443,21 +455,6 @@
             z.style.display = "none"
         }
     }
-
-    /* gestione detail layer on click */
-    function toggleLayerZoom() {
-        var y = document.getElementById("overlay");
-        var z = document.getElementById("div-detail");
-        if (z.style.display === "none") {
-            y.style.display = "block";
-            z.style.display = "block"
-
-        } else {
-            y.style.display = "none";
-            z.style.display = "none"
-        }
-    }
-
     /* gestione delete layer on click */
     function toggleLayerConfirm() {
         var y = document.getElementById("overlay");
