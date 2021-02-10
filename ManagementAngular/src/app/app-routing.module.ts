@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'invoices', loadChildren: () => import('./features/invoices/invoices.module').then(m => m.InvoicesModule), canActivate: [AuthGuard],canLoad: [AuthGuard]},
   { path: 'customers', loadChildren: () => import('./features/customers/customers.module').then(m => m.CustomersModule), canActivate: [AuthGuard],canLoad: [AuthGuard]},
   { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule), canActivate: [PagesGuard],canLoad: [PagesGuard] },
-  { path: 'invoices-create', loadChildren: () => import('./features/invoices-create/invoices-create.module').then(m => m.InvoicesCreateModule) }
+  { path: 'item', loadChildren: () => import('./features/item/item.module').then(m => m.ItemModule) }
 ];
 
 @NgModule({
