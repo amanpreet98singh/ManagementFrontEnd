@@ -500,3 +500,14 @@
         }
     })();
 </script>
+
+<!-- Script to print the content of a div -->
+<script>
+    function printDiv() {
+        var divContents = document.getElementById("div-detail").innerHTML;
+        var a = window.open('', '', 'height=1000, width=500');
+        a.document.write(divContents);
+        a.document.close();
+        a.print();
+    }
+</script>
